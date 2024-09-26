@@ -1,0 +1,23 @@
+{
+  "2": { "day": "LABOR DAY", "food": [] },
+  "3": { "day": "ITALIAN DAY", "food": ["Fish Tenders", "Rice Salad", "Brownies", "Fresh Fruit"] },
+  "4": { "day": "ITALIAN DAY", "food": ["Pasta Rustica", "Garden Salad", "Fresh Fruit"] },
+  "5": { "day": "", "food": ["Quinoa Salad", "Tomato Cuc Salad", "Fresh Fruit"] },
+  "6": { "day": "", "food": ["Margherita Pizza", "Caesar Salad", "Fresh Fruit", "Carrot Cake"] },
+  "9": { "day": "ALL AMERICAN", "food": ["Pasta Carbonara", "Garden Salad", "Fresh Fruit", "Baguette"] },
+  "10": { "day": "ASIAN DAY", "food": ["Teriyaki Chicken", "Rice", "Rugelachs", "Fresh Fruit"] },
+  "11": { "day": "", "food": ["Turkey Sandwich", "Vegetable Soup", "Fruit Salad"] },
+  "12": { "day": "", "food": ["Shepherd's Pie", "Spinach Salad", "Fresh Fruit", "Baguette"] },
+  "13": { "day": "FRENCH DAY", "food": ["Ratatouille", "Couscous", "Fresh Fruit", "Ch. Chip Cookies"] },
+  "16": { "day": "ALL AMERICAN", "food": ["BBQ Chicken", "Potato Salad", "Fresh Fruit"] },
+  "17": { "day": "", "food": ["Beef Chili", "Brown Rice", "Carrots & Celery", "Fruit Pies"] },
+  "18": { "day": "", "food": ["Pepperoni Pizza", "Garden Salad", "Fresh Fruit"] },
+  "19": { "day": "", "food": ["Roast Chicken & Vegetables", "Fresh Fruit"] },
+  "20": { "day": "", "food": ["Tortellini Marinara", "Garden Salad", "Fresh Fruit", "Cowboy Cookies"] },
+  "23": { "day": "", "food": ["Chicken Tenders", "Rice with Corn", "Banana Cake", "Fresh Fruit"] },
+  "24": { "day": "ALL AMERICAN", "food": ["Meatloaf", "Mac & Cheese", "Fresh Fruit", "Banana Cake"] },
+  "25": { "day": "", "food": ["Chicken Noodle", "Cheese Toast", "Fruit Salad"] },
+  "26": { "day": "ITALIAN DAY", "food": ["Salmon Penne Pasta", "Garden Salad", "Fresh Fruit"] },
+  "27": { "day": "", "food": ["Vegetable Fried Rice", "Fresh Fruit", "Cheesecake"] },
+  "30": { "day": "MEXICAN DAY", "food": ["Chicken Fajitas", "Mexican Rice", "Fresh Fruit"] }
+}
