@@ -28,12 +28,19 @@
     <div id="menu" class="menu"></div>
 
     <script>
-        async function displayMenu() {
+        async function getMenuData() {
             const response = await fetch('menu.json');
-            const menuData = await response.json();
+            return await response.json();
+        }
 
+        function getCurrentDay() {
             const today = new Date();
-            const day = today.getDate();
+            return today.getDate();
+        }
+
+        async function displayMenu() {
+            const menuData = await getMenuData();
+            const day = getCurrentDay();
             const menuInfo = menuData[day];
             const menuElement = document.getElementById('menu');
 
@@ -47,7 +54,32 @@
             }
         }
 
-        displayMenu();
+        async function serveJson() {
+            const menuData = await getMenuData();
+            const day = getCurrentDay();
+            const menuInfo = menuData[day];
+
+            if (menuInfo) {
+                const jsonData = JSON.stringify(menuInfo);
+                const preElement = document.createElement('pre');
+                preElement.textContent = jsonData;
+                document.body.innerHTML = '';  // Clear the page
+                document.body.appendChild(preElement);  // Display JSON
+            } else {
+                const errorMsg = { error: "No menu available for today." };
+                document.body.innerHTML = `<pre>${JSON.stringify(errorMsg)}</pre>`;
+            }
+        }
+
+        // Check URL for ?json parameter to determine if it's a JSON request
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('json')) {
+            // Serve JSON instead of rendering the page
+            serveJson();
+        } else {
+            // Display the webpage
+            displayMenu();
+        }
     </script>
 </body>
 </html>
