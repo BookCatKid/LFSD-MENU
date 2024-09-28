@@ -18,6 +18,6 @@
   "24": { "day": "ALL AMERICAN", "food": ["Meatloaf", "Mac & Cheese", "Fresh Fruit", "Banana Cake"] },
   "25": { "day": "", "food": ["Chicken Noodle", "Cheese Toast", "Fruit Salad"] },
   "26": { "day": "ITALIAN DAY", "food": ["Salmon Penne Pasta", "Garden Salad", "Fresh Fruit"] },
-  "27": { "day": "good day", "food": ["Vegetable Fried Rice", "Fresh Fruit", "Cheesecakeeeeeeeeeee"] },
+  "27": { "day": "", "food": ["Vegetable Fried Rice", "Fresh Fruit", "Cheesecake"] },
   "30": { "day": "MEXICAN DAY", "food": ["Chicken Fajitas", "Mexican Rice", "Fresh Fruit"] }
 }
