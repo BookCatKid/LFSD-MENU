@@ -10,22 +10,28 @@
             margin: 0;
             padding: 10px;
             background: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
         }
-        h1 {
-            text-align: center;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .menu {
+        .title-box, .menu {
             background-color: white;
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
             padding: 15px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        .title-box {
+            font-size: 1.5em;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <h1>Today's Food Menu</h1>
+    <div class="title-box">Today's Food Menu</div>
     <div id="menu" class="menu"></div>
 
     <script>
