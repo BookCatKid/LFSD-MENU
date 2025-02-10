@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background: transparent;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .menu {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Today's Food Menu</h1>
+    <div id="menu" class="menu"></div>
+
+    <script>
+        async function getMenuData() {
+            const response = await fetch('menu.json');
+            return await response.json();
+        }
+
+        function getCurrentDay() {
+            return new Date().getDate();
+        }
+
+        async function displayMenu() {
+            const menuData = await getMenuData();
+            const day = getCurrentDay();
+            const menuInfo = menuData[day];
+            const menuElement = document.getElementById('menu');
+
+            if (menuInfo) {
+                menuElement.innerHTML = `
+                    <h2>Day: ${day} ${menuInfo.day ? `- ${menuInfo.day}` : ""}</h2>
+                    <h3>Food Menu:</h3>
+                    <p>${menuInfo.food.length > 0 ? menuInfo.food.join("<br>") : "No food available."}</p>
+                `;
+            } else {
+                menuElement.innerHTML = "<p>No menu available for today.</p>";
+            }
+        }
+
+        async function serveJson() {
+            const menuData = await getMenuData();
+            const day = getCurrentDay();
+            const menuInfo = menuData[day];
+
+            document.body.innerHTML = `<pre>${JSON.stringify(menuInfo || { error: "No menu available for today." }, null, 2)}</pre>`;
+        }
+
+        // Check if the URL has ?json to serve JSON instead of the HTML menu
+        if (new URLSearchParams(window.location.search).has('json')) {
+            serveJson();
+        } else {
+            displayMenu();
+        }
+    </script>
+</body>
+</html>
